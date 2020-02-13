@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Reviews</h1>
+  <%= link to 'Leave a review', new_restaurant_review_path(@restaurent) %>
+  <% @restaurants.reviews.each do |review| %>
+    <div>
+      <%= review.content %>
+      <%= link to 'Delete the review', review_path(review),
+      method: :delete %>
+    </div>
+</div>

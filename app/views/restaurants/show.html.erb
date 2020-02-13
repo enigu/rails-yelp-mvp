@@ -1,0 +1,13 @@
+<div class = "container">
+<h1>
+  <%= @restaurant.name.capitalize %>
+</h1>
+<small>
+  <%= link_to "Delete", restaurant_path(@restaurant), method: :delete, data: { confirm: "Are you sure?" } %>
+</small>
+
+<ul>
+  <li> <strong><%= @restaurant.address&.capitalize %></strong></li>
+  <li> <%= @restaurant.category&.capitalize %></li>	
+</ul>
+</div>
